@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản đồ Việt Nam</title>
+    <style>
+        #header{
+            height: 300px;
+            width: 100%;
+            background-image: url(banner.jpg);
+           background-repeat:
+        }
+
+
+        #map {
+            position: relative;
+           
+        }
+        .marker {
+            position: absolute;
+            background-color: red;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .marker:hover {
+            background-color: blue;
+        }
+        .marker-popup {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            transform: translateX(-50%);
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+        }
+
+        .marker:hover .marker-popup {
+            display: block;
+            width: 100px;
+        }
+
+        .marker .marker-popup a{
+            text-decoration: none;
+            color: black;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "header">
+
+    </div>
+    <div id="map">
+        <img src="ban-do-vi-tri-viet-nam.jpg" alt="Bản đồ Việt Nam" style="width: 100%;">
+
+<!-- Hà Nội -->
+        <div class="marker" style="top: 415px; left: 520px; ">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>
+
+<!-- Lai Châu -->
+        <div class="marker" style="top: 237px; left: 245px; ">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>
+
+<!-- Điện Biên -->
+        <div class="marker" style="top: 361px; left: 182px; ">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>      
+
+<!-- Lào Cai -->
+        <div class="marker" style="top: 400px; left: 520px; ">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>
+
+<!-- Sơn La-->
+        <div class="marker" style="top: 400px; left: 520px; ">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>
+
+<!-- Yên Bái -->
+        <div class="marker" style="top: 400px; left: 520px; ">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>
+
+<!-- Hà Giang -->
+        <div class="marker" style="top: 400px; left: 520px; ">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>
+
+<!-- Cao Bằng -->
+        <div class="marker" style="top: 400px; left: 520px; ">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>
+
+<!-- Hồ Chí Minh -->
+        <div class="marker" style="top: 1734px; left: 613px;">
+            <div class="marker-popup">
+                <a href="https://vi.wikipedia.org/wiki/Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh">Thông tin</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

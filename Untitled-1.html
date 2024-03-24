@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bản đồ Việt Nam</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 500px; }
+    </style>
+</head>
+<body><!DOCTYPE html>
+<html>
+<head>
+    <title>Bản đồ Việt Nam</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 500px; }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([16.4, 107.7], 6); // Tọa độ trung tâm của Việt Nam và mức zoom
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Vẽ biên giới của Việt Nam
+    var vietnamBoundary = [
+        [8.2, 102.1],
+        [23.4, 102.1],
+        [23.4, 109.5],
+        [8.2, 109.5],
+        [8.2, 102.1]
+    ];
+    L.polygon(vietnamBoundary, {color: 'red'}).addTo(map);
+
+</script>
+
+</body>
+</html>
+
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([16.4, 107.7], 6); // Tọa độ trung tâm của Việt Nam và mức zoom
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Thêm điểm đánh dấu Hà Nội
+    var marker1 = L.marker([21.03, 105.85]).addTo(map);
+    marker1.bindPopup("<b>Hà Nội</b><br /><a href='ha-noi.html'>Thông tin</a>");
+
+    // Thêm điểm đánh dấu TP.Hồ Chí Minh
+    var marker2 = L.marker([10.78, 106.69]).addTo(map);
+    marker2.bindPopup("<b>TP.Hồ Chí Minh</b><br /><a href='tp-hcm.html'>Thông tin chi tiết</a>");
+
+    var marker2 = L.marker([10, 103]).addTo(map);
+    marker2.bindPopup("<b>Lai Châu</b><br /><a href='tp-hcm.html'>Thông tin chi tiết</a>");
+</script>
+
+</body>
+</html>

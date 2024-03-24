@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản đồ Việt Nam</title>
+    <style>
+        #header{
+            height: 200px;
+            width: 1500px;
+        }
+
+
+
+        #map {
+            position: relative;
+           
+        }
+        .marker {
+            position: absolute;
+            background-color: red;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .marker:hover {
+            background-color: blue;
+        }
+        .marker-popup {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            transform: translateX(-50%);
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+        }
+
+        .marker:hover .marker-popup {
+            display: block;
+        }
+
+        .marker:hover .marker-popup a{
+            text-decoration: none;
+            color: black;
+            width: 50px;
+            background-color: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "header">
+
+    </div>
+    <div id="map">
+        <img src="ban-do-vi-tri-viet-nam.jpg" alt="Bản đồ Việt Nam" style="width: 1500px;">
+        <div class="marker" style="top: 400px; left: 525px;">
+            <div class="marker-popup">
+                <a href="#">Thông tin</a>
+            </div>
+        </div>
+        <div class="marker" style="top: 400px; left: 500px;">
+            <div class="marker-popup">
+                <a href="https://vi.wikipedia.org/wiki/Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh">TP.Hồ Chí Minh</a>
+            </div>
+        </div>
+        <!-- Thêm các đánh dấu khác nếu cần -->
+    </div>
+</body>
+</html>
